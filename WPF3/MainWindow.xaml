@@ -12,41 +12,74 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <ToolBarTray>
+            <ToolBarTray.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF4F4F4" Offset="1"/>
+                    <GradientStop Color="#FFA6CCEC"/>
+                </LinearGradientBrush>
+            </ToolBarTray.Background>
             <ToolBar Margin="5" Padding="5">
+                <ToolBar.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF4F4F4" Offset="1"/>
+                        <GradientStop Color="#FFA6CCEC"/>
+                    </LinearGradientBrush>
+                </ToolBar.Background>
                 <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
                     <TextBlock Text="Arial"/>
                     <TextBlock Text="Times New Roman"/>
                     <TextBlock Text="Verdana"/>
+                    <TextBlock Text="Calibri"/>
                 </ComboBox>
                 <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
                     <TextBlock Text="12"/>
                     <TextBlock Text="14"/>
                     <TextBlock Text="16"/>
+                    <TextBlock Text="16"/>
+                    <TextBlock Text="18"/>
+                    <TextBlock Text="20"/>
+                    <TextBlock Text="22"/>
+                    <TextBlock Text="24"/>
+                    <TextBlock Text="32"/>
+                    <TextBlock Text="48"/>
+                    <TextBlock Text="72"/>
                 </ComboBox>
             </ToolBar>
             <ToolBar>
-                <Button>
-                    <Image Source ="Data/B.jpg"/>
+                <ToolBar.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF4F4F4" Offset="1"/>
+                        <GradientStop Color="#FFA6CCEC"/>
+                    </LinearGradientBrush>
+                </ToolBar.Background>
+                <Button Width="50" Height="50"  Click="Button_Click_B">
+                    <Image Source ="Data/B.png"/>
                 </Button>
                 <Separator/>
-                <Button>
-                    <Image Source ="Data/I.jpg"/>
+                <Button Width="50" Height="50" Click="Button_Click_I">
+                    <Image Source ="Data/I.png" />
                 </Button>
                 <Separator/>
-                <Button>
-                    <Image Source ="Data/U.jpg"/>
+                <Button Width="50" Height="50" Click="Button_Click_U">
+                    <Image Source ="Data/U.png"/>
                 </Button>
                 <Separator/>
             </ToolBar>
             <ToolBar>
+                <ToolBar.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF4F4F4" Offset="1"/>
+                        <GradientStop Color="#FFA6CCEC"/>
+                    </LinearGradientBrush>
+                </ToolBar.Background>
                 <StackPanel VerticalAlignment="Center">
                     <RadioButton Content="Черный" IsChecked="True"  Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" IsChecked="False" Checked="RadioButton_Checked"/>
+                    <RadioButton Content="Зеленый" IsChecked="False" Checked="RadioButton_Checked"/>
                 </StackPanel>
             </ToolBar>
-            </ToolBarTray>
-        <TextBox x:Name="textBox" Grid.Row="1" Margin="5" Padding="5"  FontFamily="Arial" FontSize="16" TextWrapping="Wrap"/>
-
-
+        </ToolBarTray>
+        <TextBox x:Name="textBox" Grid.Row="1" Margin="5" Padding="5" FontFamily="Arial"  FontSize="16" TextWrapping="Wrap" FontStyle="Normal" FontWeight="Normal" TextDecorations ="None" Foreground="Black" >
+        </TextBox>
     </Grid>
 </Window>
